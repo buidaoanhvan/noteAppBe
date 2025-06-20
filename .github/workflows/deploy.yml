@@ -20,9 +20,5 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
-          cd /var/www/html/noteAppBe || https://github.com/buidaoanhvan/noteAppBe.git
           cd /var/www/html/noteAppBe
-          git pull origin main
-          npm install
-          npm run build  # nếu có
-          pm2 restart note-app || pm2 start server.js --name note-app
+          ls -al
