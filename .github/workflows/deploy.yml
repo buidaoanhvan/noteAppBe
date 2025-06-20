@@ -21,4 +21,4 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
           cd /var/www/html/noteAppBe
-          ls -al
+          git clone https://github.com/buidaoanhvan/noteAppBe.git
