@@ -26,6 +26,7 @@ jobs:
           git reset --hard
           git pull origin main
           npm install
+          npx prisma db push
           npx prisma generate
           pm2 restart note-app || pm2 start server.js --name note-app
           pm2 save
