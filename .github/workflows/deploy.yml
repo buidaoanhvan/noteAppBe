@@ -20,5 +20,10 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
-          cd /var/www/html/noteAppBe
+          mkdir -p /var/www/html/noteAppBe
           git clone https://github.com/buidaoanhvan/noteAppBe.git /var/www/html/noteAppBe
+          cd /var/www/html/noteAppBe
+          git reset --hard
+          git pull origin main
+          npm install
+          pm2 restart note-app || pm2 start server.js --name note-app
