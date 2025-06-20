@@ -21,7 +21,7 @@ router.post("/new/note", async (req, res) => {
 });
 
 // ✅ Lấy 1 note theo id
-router.post("/get/note", async (req, res) => {
+router.post("/get/notes", async (req, res) => {
   try {
     const note = await prisma.note.findUnique({
       where: { id: req.body.id },
