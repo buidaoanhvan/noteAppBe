@@ -20,6 +20,7 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
+          export PATH=$PATH:/root/.nvm/versions/node/v22.16.0/bin
           mkdir -p /var/www/html/noteAppBe
           git clone https://github.com/buidaoanhvan/noteAppBe.git /var/www/html/noteAppBe
           cd /var/www/html/noteAppBe
