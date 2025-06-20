@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
-          cd /var/www/html/noteAppBe || git clone https://github.com/yourname/your-repo.git /var/www/html/noteAppBe
+          cd /var/www/html/noteAppBe || https://github.com/buidaoanhvan/noteAppBe.git
           cd /var/www/html/noteAppBe
           git pull origin main
           npm install
